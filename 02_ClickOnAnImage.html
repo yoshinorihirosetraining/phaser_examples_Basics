@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script>
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO,
+'phaser-example', this);
+
+var text;
+var counter = 0;
+
+function preload () {
+
+    game.load.image('einstein', 'assets/pics/ra_einstein.png');
+
+}
+
+function create() {
+
+    var image = game.add.sprite(game.world.centerX, game.world.centerY,
+    'einstein');
+
+    image.anchor.set(0.5);
+
+    image.inputEnabled = true;
+
+    text = game.add.text(250, 16, '', { fill: '#ffffff' });
+
+    image.events.onInputDown.add(listener, this);
+
+}
+
+function listener() {
+
+    counter++;
+    text.text = "You clicked " + counter + " times!";
+
+}
+
+
+        </script>
+    <body>
+</html>
+

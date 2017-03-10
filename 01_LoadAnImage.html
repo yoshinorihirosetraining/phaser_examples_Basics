@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script>
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', this);
+
+function preload() {
+    game.load.image('einstein', 'assets/pics/ra_einstein.png');
+}
+
+function create() {
+    game.add.sprite(0, 0, 'einstein');
+}
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script>
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', this);
+
+function preload() {
+
+    game.load.image('einstein', 'assets/pics/ra_einstein.png');
+
+}
+
+function create() {
+
+    var image = game.add.sprite(0, 0, 'einstein');
+
+    game.physics.enable(image, Phaser.Physics.ARCADE);
+
+    image.body.velocity.x = 150;
+
+}
+
+        </script>
+    </body>
+</html>
+

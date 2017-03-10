@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script>
+
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', this);
+
+function create() {
+    
+    var text = "- phaser -\n with a sprinkle of \n pixi duxt.";
+    var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+    var t = game.add.text(game.world.centerX-300, 0, text, style);
+
+}
+
+        </script>
+    </body>
+</html>
+

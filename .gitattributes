@@ -1,0 +1,11 @@
+*       text=auto
+*.html  text
+*.htm   text
+*.md    text
+README  text
+*.css   text
+*.js    text
+*.png   binary
+*.jpg   binary
+*.gif   binary
+

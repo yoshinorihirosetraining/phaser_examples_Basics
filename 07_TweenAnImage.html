@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script>
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', this);
+
+function preload() {
+    
+    game.forceSingleUpdate = true;
+    game.load.image('einstein', 'assets/pics/ra_einstein.png');
+
+}
+
+function create() {
+    
+    var sprite = game.add.sprite(-400, 0, 'einstein');
+    var tween = game.add.tween(sprite);
+    tween.to({ x: 800 }, 5000, 'Linear', true, 0);
+
+}
+
+        </script>
+    </body>
+</html>
+
